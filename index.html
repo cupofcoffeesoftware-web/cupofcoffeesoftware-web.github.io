@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bible Reading Tracker</title>
+  <title>Cup of Coffee Software</title>
   <style>
     :root {
       --accent: #4a6f4a;
@@ -19,31 +19,50 @@
       color: var(--text);
       line-height: 1.6;
     }
+    .support-banner {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 14px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .support-banner a.btn {
+      background: #fff;
+      color: var(--accent);
+      padding: 8px 20px;
+      font-size: 0.9rem;
+    }
+    .support-banner a.btn:hover { opacity: 0.85; }
     header {
       text-align: center;
       padding: 64px 24px 40px;
     }
+    header img.logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 8px;
+    }
     header h1 {
       margin: 0 0 8px;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
     header p.tagline {
       margin: 0;
       color: var(--muted);
       font-size: 1.1rem;
     }
-    header p.publisher {
-      margin-top: 16px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
     main {
-      max-width: 640px;
+      max-width: 680px;
       margin: 0 auto;
       padding: 0 24px 64px;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
     h2 {
       font-size: 1.3rem;
@@ -54,7 +73,7 @@
       flex-wrap: wrap;
       gap: 12px;
       justify-content: center;
-      margin: 24px 0;
+      margin: 20px 0 0;
     }
     .btn {
       display: inline-block;
@@ -75,16 +94,36 @@
       color: var(--accent);
       border: 2px solid var(--accent);
     }
-    .donate-box {
+    .card {
       background: #fff;
       border: 1px solid #e3ddd0;
       border-radius: 12px;
-      padding: 24px;
-      text-align: center;
+      padding: 28px;
     }
-    .donate-box p {
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+    .card-header img.app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .card p.app-tagline {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+    .card p {
       margin-top: 0;
     }
+    .text-center { text-align: center; }
     footer {
       text-align: center;
       padding: 24px;
@@ -98,45 +137,51 @@
 </head>
 <body>
 
+  <div class="support-banner">
+    <span>Enjoying our free apps? Please share them with your friends — and if you want, buy us a cup of coffee today.</span>
+    <a class="btn" href="https://www.paypal.com/ncp/payment/9FQTPNDH2V9Y4" target="_blank" rel="noopener">Buy us a coffee</a>
+  </div>
+
   <header>
-    <h1>Bible Reading Tracker</h1>
-    <p class="tagline">[One-line description of the app goes here]</p>
-    <p class="publisher">Made by Cup of Coffee Software</p>
+    <img class="logo" src="CupofCoffeeLogo.png" alt="Cup of Coffee Software logo">
+    <h1>Cup of Coffee Software</h1>
+    <p class="tagline">Simple apps that make daily habits easier — one day at a time.</p>
   </header>
 
   <main>
-    <section style="text-align: center;">
-      <div class="buttons">
-        <a class="btn btn-primary" href="[DOWNLOAD LINK — e.g. Google Play Store URL]">Get it on Google Play</a>
-      </div>
+    <section>
+      <h2>About us</h2>
+      <p>
+        A cup of coffee is small, daily, and meaningful — not a grand gesture, just a
+        simple ritual that anchors the day. That's the spirit behind everything we build.
+        We make small, focused apps — one job per app, done well — with no ads, no
+        trackers, and no dark patterns. Everything stays on your device, and every app
+        is free to use, supported by donations from people who find it genuinely helpful.
+      </p>
     </section>
 
     <section>
-      <h2>About the app</h2>
-      <p>
-        [Add a short description of what Bible Reading Tracker does — e.g. how it helps
-        users plan, track, and stay consistent with their Bible reading. You can expand
-        this with a few key features as a short list once you're ready.]
-      </p>
-    </section>
-
-    <section class="donate-box">
-      <h2>Support the developer</h2>
-      <p>
-        Bible Reading Tracker is built and maintained independently by Cup of Coffee
-        Software. If the app has been useful to you, consider supporting its continued
-        development with a small donation.
-      </p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/9FQTPNDH2V9Y4" target="_blank" rel="noopener">
-          Support via PayPal
-        </a>
+      <h2>Our apps</h2>
+      <div class="card">
+        <div class="card-header">
+          <img class="app-icon" src="bible-tracker-logo.png" alt="Bible Reading Tracker icon">
+          <h3>Bible Reading Tracker</h3>
+        </div>
+        <p class="app-tagline">A simple way to stay consistent with your Bible reading — coming soon</p>
+        <p>
+          Track your progress through bundled reading plans or build your own. Streak
+          tracking, daily reminders, and a clean, distraction-free list view — no
+          account required, and everything stays on your device.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-secondary" href="#">Coming soon to the App Store</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Cup of Coffee Software · <a href="https://github.com/">GitHub</a></p>
+    <p>&copy; 2026 Cup of Coffee Software · <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a> · <a href="https://github.com/cupofcoffeesoftware-web">GitHub</a></p>
   </footer>
 
 </body>
