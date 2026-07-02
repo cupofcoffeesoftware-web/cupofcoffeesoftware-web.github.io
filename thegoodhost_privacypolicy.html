@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — The Good Host</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000000;
+      --surface: #121212;
+      --border: #2a2a2a;
+      --accent: #E1306C;
+      --text: #ffffff;
+      --muted: #a0a0a0;
+      --radius: 12px;
+      --ig-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span {
+      background: var(--ig-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .back-link {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 100px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    .meta strong { color: var(--text); font-weight: 600; }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-top: 44px;
+      margin-bottom: 14px;
+    }
+
+    p {
+      color: #d0d0d0;
+      font-size: 15.5px;
+      margin-bottom: 16px;
+    }
+
+    p strong { color: var(--text); }
+
+    a { color: #f56040; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">the good<span>host</span></a>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</nav>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta"><strong>Effective date:</strong> July 2, 2026 &nbsp;·&nbsp; <strong>Developer:</strong> Cup of Coffee Software &nbsp;·&nbsp; <strong>Contact:</strong> <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
+
+  <p>The Good Host is an iOS app that helps hosts plan visits for their guests. This policy explains what information the app handles, where it goes, and how you can delete it.</p>
+
+  <h2>The short version</h2>
+  <div class="callout">
+    <p style="margin-bottom:0;">Your trip plans live on your phone. Nothing leaves your device unless you sign in and share a trip with a guest. We don't run ads, we don't sell data, and we collect the minimum needed to make sharing and the guestbook work.</p>
+  </div>
+
+  <h2>Information stored only on your device</h2>
+  <p>The following never leaves your phone unless you explicitly share a trip: your name and home city (as entered in Profile), your visits and their details (guest label, ages, home city, dates, interests, notes), your saved suggestions and day-by-day itineraries, and app preferences such as your preferred navigation app. Deleting the app deletes this data.</p>
+
+  <h2>Information sent to Google services</h2>
+  <p>To generate suggestions, the app sends your home city and a visit's dates, guest ages, guest home city, interests, and dislikes to the Google Gemini API (with Google Maps grounding) and, when enabled, the Google Places API to verify that suggested places are real. These requests are processed under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. Your name and your guests' identities are never included in these requests.</p>
+
+  <h2>Information collected when you use sharing and the guestbook</h2>
+  <p>These features are optional. If you never tap "Invite Guest," none of the following applies.</p>
+  <p><strong>Host account.</strong> Sharing a trip requires signing in with an email address and password, or with Google Sign-In. We store your account email and a unique account ID with Google Firebase (Authentication and Cloud Firestore).</p>
+  <p><strong>Shared trip data.</strong> When you invite a guest, a copy of that trip's label, city, dates, and itinerary is stored in Cloud Firestore so your guest can view it. Trip codes are stored only as salted hashes, never in plain text.</p>
+  <p><strong>Guest identification.</strong> A guest opening an invite provides their name and an email address or phone number. This is shown to the host (who can approve, revoke, or reject access) and stored with the shared trip. Guests do not create accounts and are not authenticated.</p>
+  <p><strong>Guestbook entries.</strong> Notes guests sign — name, message, and contact — are stored with the shared trip and visible only to the host who owns it.</p>
+  <p>All shared data is stored by Google Firebase under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We do not use analytics, advertising, or tracking SDKs of any kind.</p>
+
+  <h2>What we never do</h2>
+  <p>We never sell or rent your information. We never share it with third parties beyond the Google services named above, which act as processors to make the app function. We never use your data for advertising. The app contains no third-party analytics or trackers.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Shared trip data stays in Cloud Firestore until you delete it. You can delete your entire account and all shared data at any time in the app: <strong>Profile &rarr; Guestbook Account &rarr; Delete Account</strong>. This permanently removes your account, every shared trip, all guest access records, and all guestbook notes. Trips stored locally on your phone are yours and remain until you delete them or the app.</p>
+  <p>Guests who want their name, contact, or guestbook note removed can ask their host to revoke their access or delete the trip, or contact us at the email above.</p>
+
+  <h2>Children</h2>
+  <p>The Good Host is not directed at children under 13, and we do not knowingly collect personal information from children. Visit details such as guest ages are entered by the host and stay on the host's device unless a trip is shared.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we change this policy, we will update the effective date above and, for material changes, note it in the app's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or requests about your data: <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
+</main>
+
+<footer>
+  <p>© 2026 The Good Host, by Cup of Coffee Software.</p>
+</footer>
+
+</body>
+</html>
