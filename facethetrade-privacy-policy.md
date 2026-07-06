@@ -63,4 +63,4 @@ If we change how the App handles data, we will update this page and the effectiv
 
 ## Contact
 
-Questions about this policy: **mandalorecapital@gmail.com**
+Questions about this policy: **cupofcoffeesoftware@gmail.com**
