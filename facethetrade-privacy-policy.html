@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FaceTheTrade — Privacy Policy</title>
 <style>
+  :root { color-scheme: light dark; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 720px;
-    margin: 40px auto;
-    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
+    color: #1c1c1e;
     background: #ffffff;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
   }
-  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.3em; margin-top: 1.6em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
-  .effective-date { color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
-  ul { padding-left: 1.3em; }
-  li { margin-bottom: 0.5em; }
-  a { color: #A1782B; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  strong { color: #000; }
-  footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; font-size: 0.9em; color: #777; }
+  h1 { font-size: 1.7rem; margin-bottom: 4px; }
+  h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 1px solid #e5e5ea; padding-bottom: 6px; }
+  .effective { color: #636366; font-size: 0.95rem; margin-top: 0; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: #0a84ff; }
+  .callout { background: #f2f2f7; border-radius: 10px; padding: 14px 18px; }
+  footer { margin-top: 3rem; color: #8e8e93; font-size: 0.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #000; }
+    h2 { border-bottom-color: #2c2c2e; }
+    .effective { color: #aeaeb2; }
+    .callout { background: #1c1c1e; }
+    footer { color: #8e8e93; }
+  }
 </style>
 </head>
 <body>
 
 <h1>FaceTheTrade — Privacy Policy</h1>
-<p class="effective-date"><strong>Effective date: July 6, 2026</strong></p>
+<p class="effective"><strong>Effective date: July 9, 2026</strong></p>
 
 <p>FaceTheTrade ("the App") is developed by Cup of Coffee Software ("we," "us"). The App is a behavioral journaling tool for traders that records short videos of you during trades, transcribes what you say, and provides AI-generated coaching feedback after the trade is over.</p>
 
@@ -39,7 +46,7 @@
   <li>We operate <strong>no servers</strong> and have <strong>no account system</strong>. We cannot see your videos, hear your audio, read your transcripts, or identify you.</li>
   <li>Your video and audio recordings are captured, processed, and stored <strong>entirely on your device</strong>, and recordings are automatically deleted after 7 days.</li>
   <li>To generate coaching reports, the <strong>text transcript</strong> of what you said and <strong>aggregate heart-rate statistics</strong> (averages and peaks only) are sent to our AI provider. Nothing else is ever transmitted.</li>
-  <li>We do not collect analytics, show ads, use trackers, or sell any data — because we never possess any of your data in the first place.</li>
+  <li>We show no ads, use no cross-app trackers, and sell no data. The one exception to our otherwise server-free design: unless you opt out, the App sends <strong>anonymous, content-free usage signals</strong> (for example, that a coaching review happened and roughly how long it lasted) to a privacy-focused analytics provider. These signals contain nothing about your videos, audio, transcripts, trades, or health, and cannot identify you. You can turn them off during setup or anytime in Settings.</li>
 </ul>
 
 <h2>What the App processes on your device only</h2>
@@ -53,6 +60,7 @@
 <p>If you delete a trade, its data is removed from your device. If you delete the App, everything is removed.</p>
 
 <h2>What is transmitted, and to whom</h2>
+
 <p><strong>AI coaching reports (optional feature).</strong> When a coaching report is generated, the App sends the following to our AI provider over an encrypted connection:</p>
 <ul>
   <li>the plain-text transcript of your spoken commentary,</li>
@@ -60,7 +68,11 @@
   <li>aggregate heart-rate statistics for the session (low / average / peak beats per minute — never raw sensor data, and never your health records).</li>
 </ul>
 <p>We use a <strong>paid commercial API plan whose terms prohibit the provider from using your data to train their models.</strong> The data is sent solely to generate your report. We attach no name, email, or identifier to these requests.</p>
+
+<p class="callout"><strong>Anonymous usage stats (on by default; you can opt out).</strong> To understand whether core features work, the App sends anonymized, content-free usage signals to <strong>TelemetryDeck</strong>, a privacy-focused analytics provider that anonymizes by design (no IDFA, no personal identifiers, EU-hosted). Example: a coaching review occurred and a coarse bucket of how long it lasted. These signals never include your video, audio, transcripts, trades, prompt answers, heart-rate, notes, or reflections, and cannot be tied to your identity. You control this with the "Share anonymous usage stats" toggle in onboarding and in Settings — turn it off and nothing is sent.</p>
+
 <p><strong>Purchases.</strong> Subscriptions are processed entirely by Apple through the App Store. We receive no payment details and cannot identify purchasers.</p>
+
 <p>That is the complete list. The App makes no other network connections.</p>
 
 <h2>HealthKit</h2>
@@ -68,8 +80,9 @@
 
 <h2>What we don't do</h2>
 <ul>
-  <li>No analytics or crash-reporting SDKs</li>
-  <li>No advertising, ad identifiers, or tracking of any kind</li>
+  <li>No crash-reporting SDKs</li>
+  <li>Only one analytics tool (TelemetryDeck), sending anonymous, content-free usage signals you can switch off — never anything that identifies you or reveals your content</li>
+  <li>No advertising, ad identifiers, or cross-app tracking of any kind</li>
   <li>No selling, renting, or sharing of personal information</li>
   <li>No accounts, and therefore no profiles of you</li>
 </ul>
@@ -78,7 +91,7 @@
 <p>FaceTheTrade is a financial-behavior tool intended for adults and is not directed at children under 17.</p>
 
 <h2>Your choices and rights</h2>
-<p>Because your data lives only on your device, you are in direct control: revoke camera, microphone, speech, or Health permissions at any time in iOS Settings; skip the AI features to keep everything 100% on-device; delete individual trades or the whole App to erase data. If privacy law in your region (GDPR, CCPA, etc.) grants you rights to access or delete personal data, those rights are satisfied by the same controls — we hold nothing about you on any server.</p>
+<p>Because your data lives only on your device, you are in direct control: revoke camera, microphone, speech, or Health permissions at any time in iOS Settings; turn off "Share anonymous usage stats" to stop all analytics; skip the AI features to keep everything 100% on-device; delete individual trades or the whole App to erase data. If privacy law in your region (GDPR, CCPA, etc.) grants you rights to access or delete personal data, those rights are satisfied by the same controls — we hold nothing about you on any server.</p>
 
 <h2>Changes to this policy</h2>
 <p>If we change how the App handles data, we will update this page and the effective date, and material changes will be re-presented in the App for acknowledgment.</p>
@@ -86,9 +99,7 @@
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
 
-<footer>
-  <p>&copy; 2026 Cup of Coffee Software</p>
-</footer>
+<footer>© 2026 Cup of Coffee Software</footer>
 
 </body>
 </html>
