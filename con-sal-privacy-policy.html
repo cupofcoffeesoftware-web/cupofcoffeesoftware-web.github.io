@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aviso de Privacidad — Con Sal</title>
+<title>Aviso de Privacidad / Privacy Policy — Con Sal</title>
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -26,7 +26,7 @@
   .updated {
     color: #666;
     font-size: 0.95em;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
   .disclaimer {
     background: #fff8e6;
@@ -60,9 +60,43 @@
   a {
     color: #0066cc;
   }
+  .lang-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .lang-toggle button {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    color: #333;
+  }
+  .lang-toggle button.active {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+  }
+  .lang-block {
+    display: none;
+  }
+  .lang-block.active {
+    display: block;
+  }
 </style>
 </head>
 <body>
+
+<div class="lang-toggle">
+  <button id="btn-es" onclick="showLang('es')">Español</button>
+  <button id="btn-en" onclick="showLang('en')">English</button>
+</div>
+
+<!-- ================= SPANISH ================= -->
+<div id="lang-es" class="lang-block">
 
 <h1>Aviso de Privacidad — Con Sal</h1>
 <p class="updated">Última actualización: 14 de julio de 2026</p>
@@ -147,8 +181,112 @@ No recopilamos tu ubicación precisa ni aproximada (GPS). El enlace de ayuda en 
 <p>Para preguntas sobre este aviso o tus datos: <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
 
 <footer>
-  Este documento es una plantilla elaborada a partir de la arquitectura técnica declarada del producto (Firebase, Sign in with Apple, Gemini/Vertex AI, StoreKit) y de las respuestas de privacidad ya definidas para App Store Connect. No sustituye asesoría legal. Dado que la app maneja datos de ansiedad autoreportados y usuarios en México, se recomienda una revisión por un abogado familiarizado con la LFPDPPP antes de publicarla, especialmente respecto a la clasificación de los datos de ansiedad como datos sensibles.
+  Este documento es una plantilla elaborada a partir de la arquitectura técnica declarada del producto (Firebase, Sign in with Apple, Gemini, StoreKit) y de las respuestas de privacidad ya definidas para App Store Connect. No sustituye asesoría legal. Dado que la app maneja datos de ansiedad autoreportados y usuarios en México, se recomienda una revisión por un abogado familiarizado con la LFPDPPP antes de publicarla, especialmente respecto a la clasificación de los datos de ansiedad como datos sensibles.
 </footer>
+
+</div>
+
+<!-- ================= ENGLISH ================= -->
+<div id="lang-en" class="lang-block">
+
+<h1>Privacy Policy — Con Sal</h1>
+<p class="updated">Last updated: July 14, 2026</p>
+
+<p>Cup of Coffee Software ("we") builds and operates the <strong>Con Sal</strong> app ("the app"). This policy explains what data we collect, what we use it for, who we share it with, and what rights you have over it.</p>
+
+<div class="disclaimer">
+  Con Sal is a training tool for speaking-performance anxiety. <strong>It is not a mental health service, therapy, or a substitute for professional medical or psychological care.</strong>
+</div>
+
+<h2>1. Data Controller</h2>
+<p><strong>Cup of Coffee Software</strong><br>
+Contact: <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
+
+<h2>2. What data we collect</h2>
+
+<p><strong>Account identifiers</strong><br>
+A user identifier generated when you sign in with Sign in with Apple, used to sync your progress across devices.</p>
+
+<p><strong>Audio and content you generate</strong><br>
+Your voice during role-play practice sessions, sent transiently to our AI provider (Google Gemini) for transcription and response generation. The resulting transcript, your pre/post-session anxiety ratings, and your progress through the 4-week program are stored to your account.</p>
+
+<p><strong>Usage data</strong><br>
+App interaction: completed sessions, streaks, progress through the exposure ladder.</p>
+
+<p><strong>Subscription data</strong><br>
+Your subscription status (active trial, monthly or annual plan), used to control access to paid features. <strong>We do not collect or store your card or payment details</strong> — that's processed directly by Apple/StoreKit and never passes through our servers.</p>
+
+<p><strong>What we do NOT collect</strong><br>
+We do not collect your precise or approximate (GPS) location. The crisis-support link uses only your device's regional setting (country), not your real location. We do not access your contacts, photos, or browsing history.</p>
+
+<h2>3. What we use your data for</h2>
+<ul>
+  <li>Delivering and personalizing the practice program (adaptive role-play, progression based on your actual anxiety level, not lessons completed).</li>
+  <li>Saving and syncing your progress across devices.</li>
+  <li>Processing your subscription and trial period.</li>
+  <li>Detecting signs of distress during a session in order to surface, if needed, a link to <strong>Find A Helpline</strong> (verified, country-based helplines).</li>
+  <li>Improving the app and providing technical support.</li>
+</ul>
+
+<p><strong>We do not use your data for advertising.</strong> We do not share your information with ad networks or data brokers, and we do not combine it with data from other apps or sites for ad targeting.</p>
+
+<h2>4. Who we share data with</h2>
+<p>We work with the following providers, solely to operate the app:</p>
+
+<table>
+  <tr><th>Provider</th><th>Purpose</th></tr>
+  <tr><td>Apple (Sign in with Apple, StoreKit)</td><td>Authentication and payments</td></tr>
+  <tr><td>Google Firebase (Firestore, Cloud Functions)</td><td>Progress storage and authentication</td></tr>
+  <tr><td>Google Gemini</td><td>Voice transcription and response generation during practice sessions</td></tr>
+  <tr><td>Find A Helpline / ThroughLine</td><td>External link to country-based helplines (no data is shared with them; it's a link only)</td></tr>
+</table>
+
+<p>None of these providers is authorized to use your data for purposes other than what we've contracted them for.</p>
+
+<h2>5. Data retention</h2>
+<p>We retain your progress and account data while your account is active. Practice audio is used transiently to generate the transcript and is not permanently retained on our AI provider's servers. You can request deletion of your account and data at any time (see Section 7).</p>
+
+<h2>6. Security</h2>
+<p>Access keys to our AI providers are never exposed in the app — all calls go through server-side functions with usage limits. Data is transmitted encrypted.</p>
+
+<h2>7. Your rights (Access, Rectification, Cancellation, Objection)</h2>
+<p>Under applicable data protection law, you have the right to:</p>
+<ul>
+  <li><strong>Access</strong> the data we hold about you.</li>
+  <li><strong>Rectify</strong> inaccurate or outdated data.</li>
+  <li><strong>Cancel / delete</strong> your account and data.</li>
+  <li><strong>Object</strong> to processing of your data for specific purposes.</li>
+</ul>
+<p>To exercise any of these rights, email us at <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a>. We'll respond within a reasonable time as required by applicable law.</p>
+
+<h2>8. Children</h2>
+<p>Con Sal is not directed at children and we do not knowingly collect data from minors. If you become aware that a minor has provided us data, please contact us so we can remove it.</p>
+
+<h2>9. An important reminder about scope</h2>
+<p>Con Sal addresses speaking-performance anxiety — it does not diagnose, treat, or substitute for mental health care. If you're in crisis or dealing with a clinical anxiety condition, please seek professional help. The app can link you to verified helplines, but it is not an emergency service.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>We may update this policy as the app evolves. Any changes will be posted on this same page along with the updated date.</p>
+
+<h2>11. Contact</h2>
+<p>Questions about this policy or your data: <a href="mailto:cupofcoffeesoftware@gmail.com">cupofcoffeesoftware@gmail.com</a></p>
+
+<footer>
+  This document is a template drafted from the product's stated technical architecture (Firebase, Sign in with Apple, Gemini, StoreKit) and the privacy responses already defined for App Store Connect. It is not a substitute for legal advice. Because the app handles self-reported anxiety data and users in Mexico, review by an attorney familiar with Mexico's LFPDPPP is recommended before publishing, particularly regarding the classification of anxiety data as sensitive data.
+</footer>
+
+</div>
+
+<script>
+  function showLang(lang) {
+    document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = (lang === 'es') ? 'es-MX' : 'en';
+  }
+  showLang('es');
+</script>
 
 </body>
 </html>
